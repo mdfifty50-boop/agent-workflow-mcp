@@ -1,0 +1,52 @@
+{
+  "name": "agent-workflow-mcp",
+  "version": "0.1.0",
+  "description": "Multi-step workflow orchestration MCP server — define, execute, pause, resume, and monitor complex agent workflows with dependency resolution and retry policies",
+  "author": "THRONE",
+  "license": "MIT",
+  "transport": "stdio",
+  "tools": [
+    {
+      "name": "create_workflow",
+      "description": "Define a workflow with named steps, dependencies, and retry policies"
+    },
+    {
+      "name": "start_workflow",
+      "description": "Start executing a workflow, returns execution ID and ready steps"
+    },
+    {
+      "name": "complete_step",
+      "description": "Mark a step as completed/failed/skipped with output data"
+    },
+    {
+      "name": "get_workflow_status",
+      "description": "Get current status of a workflow execution with per-step details"
+    },
+    {
+      "name": "pause_workflow",
+      "description": "Pause a running workflow execution"
+    },
+    {
+      "name": "resume_workflow",
+      "description": "Resume a paused workflow execution"
+    },
+    {
+      "name": "list_workflows",
+      "description": "List workflow definitions or executions with optional filtering"
+    },
+    {
+      "name": "cancel_workflow",
+      "description": "Cancel a running workflow and preserve completed work"
+    }
+  ],
+  "resources": [
+    {
+      "uri": "workflows://active",
+      "description": "Currently active workflow executions with summary"
+    },
+    {
+      "uri": "workflows://stats",
+      "description": "Aggregate statistics (total workflows, success rate, avg duration)"
+    }
+  ]
+}

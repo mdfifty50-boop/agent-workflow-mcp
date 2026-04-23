@@ -1,0 +1,40 @@
+{
+  "name": "agent-workflow-mcp",
+  "version": "0.1.0",
+  "mcpName": "io.github.mdfifty50-boop/agent-workflow",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mdfifty50-boop/agent-workflow-mcp"
+  },
+  "description": "MCP server for multi-step workflow orchestration — define, execute, pause, resume, and monitor complex agent workflows with dependency resolution",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "agent-workflow-mcp": "src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --test src/**/*.test.js"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "workflow",
+    "orchestration",
+    "agent-workflow",
+    "multi-step",
+    "dependency-graph",
+    "ai-agent",
+    "agentic-engineering",
+    "model-context-protocol"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.24.0"
+  }
+}
