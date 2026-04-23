@@ -1,0 +1,14 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      dataDir:
+        type: string
+        description: "Directory for workflow data persistence (default: ~/.agent-workflow/)"
+  commandFunction: |-
+    (config) => ({
+      command: 'npx',
+      args: ['agent-workflow-mcp'],
+      env: config.dataDir ? { WORKFLOW_DATA_DIR: config.dataDir } : {}
+    })
